@@ -24,7 +24,7 @@ namespace GetConsultaMontoOrdenes
         public DataSet SalesOrderHeader()
         {
             cn.Open();
-            SqlDataAdapter ad = new SqlDataAdapter("select top 50 salesorderid from sales.salesorderheader", cn);
+            SqlDataAdapter ad = new SqlDataAdapter("select top 100 salesorderid from sales.salesorderheader", cn);
             cn.Close();
             DataSet ds = new DataSet();
             ad.Fill(ds);
